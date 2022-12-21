@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            gridTemplateColumns: {
+              // Simple 16 column grid
+              auto: 'repeat(auto-fit, minmax(320px, 1fr))',
+            },
+          },
+        },
+      };
+    </script>
+    <title>Image Gallery</title>
+  </head>
+  <body class="min-h-screen bg-teal-100 md:px-10 md:py-20">
+    <!-- Card -->
+    <div class="bg-white p-8 md:rounded-xl md:p-16 md:shadow-xl w-full mx-auto max-w-7xl">
+      <main class="max-w-5xl mx-auto">
+        <header class="mb-10">
+          <nav
+            class="capitalize text-sm my-14 sm:my-24 flex flex-col mx-auto text-center sm:text-left sm:flex-row gap-5 sm:mr-0 sm:ml-auto w-min"
+          >
+            <a href="#" class="hover:font-medium hover:underline underline-offset-4 decoration-2"
+              >vectors</a
+            >
+            <a href="#" class="hover:font-medium hover:underline underline-offset-4 decoration-2"
+              >illustration</a
+            >
+            <a href="#" class="hover:font-medium hover:underline underline-offset-4 decoration-2"
+              >images</a
+            >
+            <a href="#" class="hover:font-medium hover:underline underline-offset-4 decoration-2"
+              >images</a
+            >
+          </nav>
+
+          <div class="flex flex-col sm:flex-row items-stretch gap-4 justify-between sm:items-end">
+            <div
+              class="border-b-2 flex items-end pb-2 pl-2 focus-within:border-black group transition-all"
+            >
+              <input
+                type="text"
+                name="search"
+                class="outline-none flex-1 sm:flex-none placeholder:font-thin sm:w-80 duration-200"
+                id="search"
+                placeholder="Search"
+              />
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-7 text-gray-300 duration-200 hover:scale-110 hover:stroke-black group-focus-within:stroke-black"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <circle cx="10" cy="10" r="7" />
+                  <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+              </button>
+            </div>
+
+            <button
+              class="bg-black text-white border border-black hover:bg-transparent hover:text-black rounded px-12 py-3 transition-all duration-150"
+            >
+              Upload
+            </button>
+          </div>
+        </header>
+
+        <main class="grid grid-cols-auto gap-4 justify-items-center">
+          <div class="relative group">
+            <!-- Image -->
+            <img
+              src="https://source.unsplash.com/random/650x500?city,country,land,newyork,buildings,symmetry"
+              alt="image 1"
+            />
+            <!-- Caption -->
+            <figcaption
+              class="absolute left-0 bottom-0 right-0 bg-black/40 p-2 px-4 duration-500 text-white opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm">City Image</p>
+                  <p class="text-xs">25,325 likes - 3,325 shares</p>
+                </div>
+                <img src="images/bookmark.svg" alt="bookmark" class="cursor-pointer" />
+              </div>
+            </figcaption>
+          </div>
+          <div class="relative group">
+            <!-- Image -->
+            <img
+              src="https://source.unsplash.com/random/650x500?space,universe,galaxy,planets,spaceship,pattern"
+              alt="image 2"
+            />
+            <!-- Caption -->
+            <figcaption
+              class="absolute left-0 bottom-0 right-0 bg-black/40 p-2 px-4 duration-500 text-white opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm">Abstract Image</p>
+                  <p class="text-xs">235 likes - 35 shares</p>
+                </div>
+                <img src="images/bookmark.svg" alt="bookmark" class="cursor-pointer" />
+              </div>
+            </figcaption>
+          </div>
+
+          <div class="relative group">
+            <img
+              src="https://source.unsplash.com/random/650x500?asthetic,furniture,lifestyle,army,navy,soldiers,weather"
+              alt="image 3"
+            />
+            <!-- Caption -->
+            <figcaption
+              class="absolute left-0 bottom-0 right-0 bg-black/40 p-2 px-4 duration-500 text-white opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm">Lifestyle Image</p>
+                  <p class="text-xs">4,335 likes - 535 shares</p>
+                </div>
+                <img src="images/bookmark.svg" alt="bookmark" class="cursor-pointer" />
+              </div>
+            </figcaption>
+          </div>
+
+          <div class="relative group">
+            <img
+              src="https://source.unsplash.com/random/650x500?sea,underwater,fishes,ocean,landscape,water,clouds,nature"
+              alt="image 4"
+            />
+            <!-- Caption -->
+            <figcaption
+              class="absolute left-0 bottom-0 right-0 bg-black/40 p-2 px-4 duration-500 text-white opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm">Natural Image</p>
+                  <p class="text-xs">3,445 likes - 215 shares</p>
+                </div>
+                <img src="images/bookmark.svg" alt="bookmark" class="cursor-pointer" />
+              </div>
+            </figcaption>
+          </div>
+
+          <div class="relative group">
+            <img
+              src="https://source.unsplash.com/random/650x500?aprtment,architecture,temples,monuments"
+              alt="image 5"
+            />
+            <!-- Caption -->
+            <figcaption
+              class="absolute left-0 bottom-0 right-0 bg-black/40 p-2 px-4 duration-500 text-white opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm">Architecture Image</p>
+                  <p class="text-xs">2,235 likes - 245 shares</p>
+                </div>
+                <img src="images/bookmark.svg" alt="bookmark" class="cursor-pointer" />
+              </div>
+            </figcaption>
+          </div>
+          <div class="relative group">
+            <img
+              src="https://source.unsplash.com/random/650x500?nature,tree,weather,storm,clouds,mountains,asthetic"
+              alt="image 6"
+            />
+            <!-- Caption -->
+            <figcaption
+              class="absolute left-0 bottom-0 right-0 bg-black/40 p-2 px-4 duration-500 text-white opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex justify-between">
+                <div>
+                  <p class="text-sm">Nature Image</p>
+                  <p class="text-xs">5,329 likes - 353 shares</p>
+                </div>
+                <img src="images/bookmark.svg" alt="bookmark" class="cursor-pointer" />
+              </div>
+            </figcaption>
+          </div>
+        </main>
+      </main>
+    </div>
+  </body>
+</html>

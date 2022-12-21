@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Email Subscribe</title>
+  </head>
+  <body>
+    <!-- Background Container -->
+    <div class="bg-indigo-100 flex items-center justify-center h-screen">
+      <!-- Card -->
+      <div
+        class="mx-6 rounded-lg overflow-hidden text-white bg-gradient-to-r from-purple-400 to-blue-400 flex flex-col md:flex-row shadow-xl"
+      >
+        <div class="overflow-hidden">
+          <img
+            src="https://source.unsplash.com/random/500x500?space,travel,sunset,night"
+            alt="card"
+            class="h-80 w-full md:h-64 rounded-lg md:rounded-none md:rounded-l-lg hover:scale-105 transition-all hover:blur duration-100"
+          />
+        </div>
+
+        <div class="p-6 md:p-12 text-center md:text-left">
+          <h2 class="text-xl font-bold">
+            Get diet and fitness tips in your inbox
+          </h2>
+
+          <p class="mb-5 text-sm font-light my-4 max-w-xs tracking-wide">
+            Eat better and exercise better. Sign up for the Diet&Fitness
+            newsletter.
+          </p>
+
+          <div class="flex flex-col gap-4 md:flex-row md:items-center">
+            <input
+              type="text"
+              placeholder="Enter your email address"
+              class="border flex-1 bg-transparent text-white p-3 text-center outline-none placeholder:text-slate-100 text-sm rounded"
+            />
+            <button
+              class="bg-white text-purple-400 p-3 text-sm uppercase rounded hover:bg-transparent hover:text-white border transiton-all duration-100"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

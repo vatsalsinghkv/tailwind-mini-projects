@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ['Mulish', 'sans-serif'],
+            mono: ['Rokkitt', 'monospace'],
+          },
+        },
+      };
+    </script>
+    <title>Login Modal</title>
+  </head>
+  <body class="min-h-screen p-6 grid place-items-center bg-cyan-50">
+    <!-- CARD -->
+    <div class="bg-white rounded-xl shadow-2xl w-full max-w-4xl flex overflow-hidden relative">
+      <!-- Content -->
+      <div class="p-6 w-full sm:w-[60%] md:w-1/2 md:p-10 lg:p-12">
+        <h1 class="text-3xl font-bold font-mono">Log In</h1>
+        <p class="mt-4 text-sm font-thin text-slate-500">
+          Log in to your account to upload or download pictures, videos or music.
+        </p>
+
+        <button
+          class="grid place-items-center bg-white h-8 w-8 rounded-full absolute top-5 right-5 z-10 text-sm hover:font-bold hover:text-red-500 ping group"
+        >
+          <span class="relative z-20">╳</span>
+          <div
+            class="bg-white absolute top-0 right-0 z-0 h-8 w-8 rounded-full group-hover:animate-ping"
+          ></div>
+        </button>
+
+        <form class="mt-10 space-y-5">
+          <input
+            type="email"
+            name="mail"
+            id="mail"
+            placeholder="Enter your email address"
+            class="w-full p-4 px-5 rounded border border-slate-300 bg-transparent placeholder:text-sm focus:outline-cyan-600"
+          />
+          <div
+            class="flex pt-2 flex-col text-center sm:text-left sm:flex-row sm:items-center gap-5 justify-between pb-4"
+          >
+            <a href="#" class="text-sm text-cyan-600 hover:text-cyan-800 duration-150"
+              >Forgot password?</a
+            >
+            <button
+              class="px-7 py-4 text-sm font-bold bg-cyan-500 focus:bg-cyan-700 hover:bg-cyan-700 outline-none duration-150 text-white rounded space-x-2 flex justify-center sm:justify-start items-center"
+            >
+              <span>Next</span> <span class="text-base"> → </span>
+            </button>
+          </div>
+          <hr class="border-slate-300" />
+
+          <p class="text-xs text-center text-slate-400">Or log in with</p>
+
+          <div class="pt-1 flex flex-col sm:flex-row gap-4">
+            <button
+              class="px-4 py-3 rounded hover:shadow hover:border-cyan-400 focus:shadow focus:outline-cyan-400 border border-slate-300 flex-1 text-sm flex items-center justify-center gap-2"
+            >
+              <img src="images/facebook.png" alt="facebook" class="w-6" /> Facebook</button
+            ><button
+              class="px-4 py-3 rounded hover:shadow hover:border-cyan-400 focus:shadow focus:outline-cyan-400 border border-slate-300 flex-1 text-sm flex items-center justify-center gap-2"
+            >
+              <img src="images/google.png" alt="google" class="w-6" /> Google
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Image -->
+      <div class="shrink-1 w-0 sm:w-[40%] md:w-1/2 overflow-hidden">
+        <img
+          src="https://source.unsplash.com/random/600x500?underwater,under-water,skyblue,galaxy,sea,cyan"
+          alt="image"
+          class="object-cover h-full hover:scale-105 duration-200"
+        />
+      </div>
+    </div>
+  </body>
+</html>
